@@ -24,7 +24,7 @@ class MyCartView extends StatelessWidget {
           style: Styles.style25,
         ),
       ),
-      body: const MyCartViewBody(),
+      body: const MyCartViewBody(title: '',),
     );
 
   }
