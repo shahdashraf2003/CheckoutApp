@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:payment_app/core/widgets/custom_button_widget.dart';
+import 'package:payment_app/features/checkout/presentation/views/payment_details_view.dart';
 import 'package:payment_app/features/checkout/presentation/views/widgets/order_info_item_widget.dart';
 import 'package:payment_app/features/checkout/presentation/views/widgets/total_price_widget.dart';
 
@@ -15,7 +16,7 @@ class MyCartViewBody extends StatelessWidget {
       child: Column(
         children: [
           const SizedBox(height: 18),
-          Image.asset('assets/images/basketimage.png'),
+          Expanded(child: Image.asset('assets/images/basketimage.png')),
           const SizedBox(height: 25),
           const OrderInfoItem(title: 'Order Subtotal', value: r'42.97$'),
           const SizedBox(height: 3),
@@ -34,8 +35,18 @@ class MyCartViewBody extends StatelessWidget {
             value: '\$50.97',
           ),
           const SizedBox(height: 16),
-          const CustomButton(),
-          const SizedBox(height: 12),
+          CustomButton(
+            onTap: () {
+              Navigator.of(context).push(
+                MaterialPageRoute(
+                  builder: (context) {
+                    return const PaymentDetailsview();
+                  },
+                ),
+              );
+            },
+          ),
+          const SizedBox(height: 30),
         ],
       ),
     );
