@@ -9,9 +9,7 @@ class MyCartView extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: buildAppBar(title: 'My Cart'),
-      body: const MyCartViewBody(
-        title: '',
-      ),
+      body: const MyCartViewBody(),
     );
   }
 }

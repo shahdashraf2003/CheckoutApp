@@ -7,7 +7,6 @@ import 'package:payment_app/features/checkout/presentation/views/widgets/total_p
 class MyCartViewBody extends StatelessWidget {
   const MyCartViewBody({
     super.key,
-    required String title,
   });
   @override
   Widget build(BuildContext context) {
